@@ -1,0 +1,16 @@
+{
+  "name": "html-markdown-util-for-mybatis-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "Xavi Lee",
+  "license": "MIT",
+  "dependencies": {
+    "turndown": "^7.1.2"
+  }
+}
