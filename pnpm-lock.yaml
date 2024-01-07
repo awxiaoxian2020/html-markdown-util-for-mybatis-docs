@@ -5,21 +5,21 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  joplin-turndown-plugin-gfm:
-    specifier: ^1.0.12
-    version: 1.0.12
+  '@joplin/turndown-plugin-gfm':
+    specifier: ^1.0.54
+    version: 1.0.54
   turndown:
     specifier: ^7.1.2
     version: 7.1.2
 
 packages:
 
-  /domino@2.1.6:
-    resolution: {integrity: sha512-3VdM/SXBZX2omc9JF9nOPCtDaYQ67BGp5CoLpIQlO2KCAPETs8TcDHacF26jXadGbvUteZzRTeos2fhID5+ucQ==}
+  /@joplin/turndown-plugin-gfm@1.0.54:
+    resolution: {integrity: sha512-QoNPwP7CDJOn/pfehGrLTKl6fgcl/VIXQP1bNqm8tfx3bx3uedyjFE75ef8yRGwNIe+ukqPbDFo+EVBc7rE4+Q==}
     dev: false
 
-  /joplin-turndown-plugin-gfm@1.0.12:
-    resolution: {integrity: sha512-qL4+1iycQjZ1fs8zk3jSRk7cg3ROBUHk7GKtiLAQLFzLPKErnILUvz5DLszSQvz3s1sTjPbywLDISVUtBY6HaA==}
+  /domino@2.1.6:
+    resolution: {integrity: sha512-3VdM/SXBZX2omc9JF9nOPCtDaYQ67BGp5CoLpIQlO2KCAPETs8TcDHacF26jXadGbvUteZzRTeos2fhID5+ucQ==}
     dev: false
 
   /turndown@7.1.2:

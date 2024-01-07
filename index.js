@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const TurndownService = require("turndown");
 // var turndownPluginGfm = require('@joplin/turndown-plugin-gfm')
-var tables = require('joplin-turndown-plugin-gfm').tables
+var tables = require('@joplin/turndown-plugin-gfm').tables
 // var gfm = turndownPluginGfm.gfm
 const turndownService = new TurndownService({
   headingStyle: "atx",
