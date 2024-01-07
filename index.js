@@ -18,13 +18,15 @@ turndownService.addRule("pre", {
 });
 turndownService.keep('span');
 turndownService.use(tables)
+
 // an example is: pnpm run start test.html
 const filePath = path.join(__dirname, process.argv[2]); 
+
 const fileContent = fs.readFileSync(filePath, 'utf-8');
 const mainRegex = /<main\b[^>]*>([\s\S]*?)<\/main>/i;
 const match = fileContent.match(mainRegex);
 const mainContent = match ? match[0] : '';
-const escapedContent = mainContent.replace(/ \| /gi, ' &hh#124; '); // prevent converting "\|" again to "|
+const escapedContent = mainContent.replace(/ \| /gi, ' &hh#124; '); // prevent converting "\|" again
 fs.writeFileSync("main.html", escapedContent, 'utf-8');
 const initMarkdown = turndownService.turndown(fs.readFileSync("main.html", "utf8"));
 const markdown = initMarkdown.replace(/&hh#124;/gi, '&#124;'); // convert back to "&#124;" 
