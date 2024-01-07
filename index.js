@@ -30,5 +30,5 @@ const escapedContent = mainContent.replace(/ \| /gi, ' &hh#124; '); // prevent c
 fs.writeFileSync("main.html", escapedContent, 'utf-8');
 const initMarkdown = turndownService.turndown(fs.readFileSync("main.html", "utf8"));
 const markdown = initMarkdown.replace(/&hh#124;/gi, '&#124;'); // convert back to "&#124;" 
-fs.writeFileSync("output.md", markdown); // Replace 'output.md' with the desired output file name
+fs.writeFileSync(process.argv[2]+".md", markdown);
 console.log("Markdown file created successfully!");
