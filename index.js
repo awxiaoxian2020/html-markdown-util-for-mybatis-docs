@@ -4,12 +4,14 @@ const TurndownService = require("turndown");
 // var turndownPluginGfm = require('@joplin/turndown-plugin-gfm')
 var tables = require('@joplin/turndown-plugin-gfm').tables
 // var gfm = turndownPluginGfm.gfm
+
 const turndownService = new TurndownService({
   headingStyle: "atx",
   bulletListMarker: "-",
   codeBlockStyle: "fenced",
   hr: "---",
 });
+
 turndownService.use(tables)
 turndownService.addRule("pre", {
   filter: "pre",
@@ -17,8 +19,9 @@ turndownService.addRule("pre", {
     return "```\n" + node.textContent + "\n```";
   },
 });
-
 turndownService.keep('span');
+
+// an example is: pnpm run start test.html
 const filePath = path.join(__dirname, process.argv[2]); 
 const fileContent = fs.readFileSync(filePath, 'utf-8');
 const mainRegex = /<main\b[^>]*>([\s\S]*?)<\/main>/i;
